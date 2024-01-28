@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbqn2ibksqj4n"]
+
+[ext_resource type="Texture2D" uid="uid://bfe2228vjd15y" path="res://button/sillicat.png" id="1_y8f77"]
+[ext_resource type="Texture2D" uid="uid://bal2hkhoi8w2r" path="res://button/sillicat_on.png" id="2_ihwvf"]
+[ext_resource type="Script" path="res://sillyClickCountShop.gd" id="2_lqejb"]
+[ext_resource type="FontFile" uid="uid://bx22ahrce87rx" path="res://assets/CreatiCredad.ttf" id="3_tbidr"]
+
+[node name="SillyClickCountShop" type="TextureButton" node_paths=PackedStringArray("priceLabel", "countLabel")]
+offset_left = -100.0
+offset_top = -32.0
+offset_right = 100.0
+offset_bottom = 33.0
+texture_normal = ExtResource("1_y8f77")
+texture_pressed = ExtResource("2_ihwvf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_lqejb")
+priceLabel = NodePath("price")
+countLabel = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -46.0
+offset_top = -27.0
+offset_right = 247.0
+offset_bottom = 3.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("3_tbidr")
+theme_override_font_sizes/font_size = 26
+text = "Sillicat Gel Upgrade LVL 1"
+horizontal_alignment = 1
+
+[node name="price" type="Label" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 71.0
+offset_right = 157.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("3_tbidr")
+theme_override_font_sizes/font_size = 30
+text = "100
+"
+horizontal_alignment = 1

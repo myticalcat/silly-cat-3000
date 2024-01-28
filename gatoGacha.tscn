@@ -1,0 +1,58 @@
+[gd_scene load_steps=33 format=3 uid="uid://ceuyvajq3fj30"]
+
+[ext_resource type="Script" path="res://gatoGacha.gd" id="1_rm41g"]
+[ext_resource type="Resource" uid="uid://c8p6esodaksel" path="res://gatoGacha/common1.tres" id="2_jscpu"]
+[ext_resource type="Resource" uid="uid://cpltgl1bphlg4" path="res://gatoGacha/common2.tres" id="3_fahll"]
+[ext_resource type="Resource" uid="uid://c5ftqib5c1mju" path="res://gatoGacha/common3.tres" id="4_1fg8y"]
+[ext_resource type="Resource" uid="uid://bihw05t3mk8sv" path="res://gatoGacha/rare1.tres" id="4_h1uk7"]
+[ext_resource type="Resource" uid="uid://bqv7jvvgq5sjg" path="res://gatoGacha/rare2.tres" id="5_m28wk"]
+[ext_resource type="Resource" uid="uid://osnqoce743xd" path="res://gatoGacha/common4.tres" id="5_qt0ee"]
+[ext_resource type="Resource" uid="uid://bsscggsedviwe" path="res://gatoGacha/common5.tres" id="6_m1bcc"]
+[ext_resource type="Resource" uid="uid://bjvkai6rirwyc" path="res://gatoGacha/ssr1.tres" id="6_u5hhi"]
+[ext_resource type="Resource" uid="uid://bfvs70txty201" path="res://gatoGacha/common6.tres" id="7_db05i"]
+[ext_resource type="Resource" uid="uid://8i5d4vgw0rkb" path="res://gatoGacha/common7.tres" id="8_vajhj"]
+[ext_resource type="Resource" uid="uid://bhb6ciuheeyk0" path="res://gatoGacha/common8.tres" id="9_y1d6x"]
+[ext_resource type="Resource" uid="uid://doboe1pn68k3c" path="res://gatoGacha/common9.tres" id="10_dpyhf"]
+[ext_resource type="Resource" uid="uid://cevvvk5nmbfk1" path="res://gatoGacha/common10.tres" id="11_xu2t4"]
+[ext_resource type="Resource" uid="uid://30hl8rdyp8ga" path="res://gatoGacha/rare3.tres" id="12_vjghf"]
+[ext_resource type="Resource" uid="uid://caofrvi5apqti" path="res://gatoGacha/rare4.tres" id="13_fnbq4"]
+[ext_resource type="Resource" uid="uid://b83kpgy323ebr" path="res://gatoGacha/rare6.tres" id="14_nfi5a"]
+[ext_resource type="Resource" uid="uid://dx8bh8j6x8tdl" path="res://gatoGacha/rare7.tres" id="15_0xsyf"]
+[ext_resource type="Resource" uid="uid://bup5m75s0otck" path="res://gatoGacha/rare8.tres" id="16_5ol2v"]
+[ext_resource type="Resource" uid="uid://dgtwccqw0tx37" path="res://gatoGacha/rare9.tres" id="17_af2he"]
+[ext_resource type="Resource" uid="uid://qamelki3vnht" path="res://gatoGacha/ssr2.tres" id="17_x45e4"]
+[ext_resource type="Resource" uid="uid://cehvhbtfvosl5" path="res://gatoGacha/ssr3.tres" id="18_loehf"]
+[ext_resource type="Resource" uid="uid://yjl1yn7j7o1x" path="res://gatoGacha/rare10.tres" id="18_u5gse"]
+[ext_resource type="Resource" uid="uid://c8ypmclf5ioxk" path="res://gatoGacha/ssr4.tres" id="19_m4clm"]
+[ext_resource type="Resource" uid="uid://brty3qcq8rgjl" path="res://gatoGacha/ssr5.tres" id="20_j5vrf"]
+[ext_resource type="AudioStream" uid="uid://dd770mrd7pj0w" path="res://assets/AOLAIM2.mp3" id="21_pwhl6"]
+[ext_resource type="Resource" uid="uid://blo8f68437j07" path="res://gatoGacha/ssr6.tres" id="21_t84vf"]
+[ext_resource type="AudioStream" uid="uid://dly8jpvageth" path="res://assets/AOLAIM.mp3" id="22_lkwgs"]
+[ext_resource type="Resource" uid="uid://b1tap1eq1hqf1" path="res://gatoGacha/ssr7.tres" id="22_wkqmu"]
+[ext_resource type="Resource" uid="uid://bsddbc7bhkaao" path="res://gatoGacha/ssr8.tres" id="23_m2pod"]
+[ext_resource type="AudioStream" uid="uid://2sbdi5cbwi6o" path="res://assets/Microsoft Windows 95 Startup Sound.mp3" id="23_suqv5"]
+[ext_resource type="Resource" uid="uid://cojxs5t8gg0ta" path="res://gatoGacha/ssr9.tres" id="24_18lcj"]
+
+[node name="GatoGacha" type="Sprite2D" node_paths=PackedStringArray("timer", "cSfx", "rSfx", "sSfx")]
+script = ExtResource("1_rm41g")
+timer = NodePath("Timer")
+commonSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("2_jscpu"), ExtResource("3_fahll"), ExtResource("4_1fg8y"), ExtResource("5_qt0ee"), ExtResource("6_m1bcc"), ExtResource("7_db05i"), ExtResource("8_vajhj"), ExtResource("9_y1d6x"), ExtResource("10_dpyhf"), ExtResource("11_xu2t4")])
+rareSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("4_h1uk7"), ExtResource("5_m28wk"), ExtResource("12_vjghf"), ExtResource("13_fnbq4"), ExtResource("14_nfi5a"), ExtResource("15_0xsyf"), ExtResource("16_5ol2v"), ExtResource("17_af2he"), ExtResource("18_u5gse")])
+superSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("6_u5hhi"), ExtResource("17_x45e4"), ExtResource("18_loehf"), ExtResource("19_m4clm"), ExtResource("20_j5vrf"), ExtResource("21_t84vf"), ExtResource("22_wkqmu"), ExtResource("23_m2pod"), ExtResource("24_18lcj")])
+cSfx = NodePath("Common")
+rSfx = NodePath("Rare")
+sSfx = NodePath("ssr")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Common" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_pwhl6")
+
+[node name="Rare" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_lkwgs")
+
+[node name="ssr" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_suqv5")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

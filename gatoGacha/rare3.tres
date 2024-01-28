@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GatoResorce" load_steps=4 format=3 uid="uid://30hl8rdyp8ga"]
+
+[ext_resource type="Script" path="res://GatoResource.gd" id="1_hjqv7"]
+[ext_resource type="Texture2D" uid="uid://beog3eluhhggi" path="res://gatoGacha/rare3_off.png" id="2_3uvqj"]
+[ext_resource type="Texture2D" uid="uid://bjsjtargacpax" path="res://gatoGacha/rare3_on.png" id="3_ot333"]
+
+[resource]
+script = ExtResource("1_hjqv7")
+spriteOn = ExtResource("3_ot333")
+spriteOff = ExtResource("2_3uvqj")
+clickAmount = 6
+speedClick = 3.0
+rarity = 1

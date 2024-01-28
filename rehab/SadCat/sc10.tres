@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://hcwqeoj5ebto"]
+
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_6jxhe"]
+[ext_resource type="Texture2D" uid="uid://bb3yjonvuylbh" path="res://rehab/SadCat/sc9.png" id="1_v7lc5"]
+
+[resource]
+script = ExtResource("1_6jxhe")
+name = Array[String](["Nawfa", "Lewis", "Janet"])
+story = Array[String](["Mom did not cook.", "Can't handle change.", "Rewatching no longer cat."])
+sadcat = ExtResource("1_v7lc5")

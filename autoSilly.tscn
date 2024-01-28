@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc264awka0oyj"]
+
+[ext_resource type="Texture2D" uid="uid://busmuduhdk8oh" path="res://button_on.png" id="1_4w8w2"]
+[ext_resource type="Script" path="res://auto_silly.gd" id="2_4kdjl"]
+[ext_resource type="Texture2D" uid="uid://cnyk5ul7r0gkj" path="res://button_off.png" id="3_fxu4a"]
+
+[node name="AutoSilly" type="Sprite2D"]
+texture = ExtResource("3_fxu4a")
+script = ExtResource("2_4kdjl")
+notSilly = ExtResource("3_fxu4a")
+silly = ExtResource("1_4w8w2")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

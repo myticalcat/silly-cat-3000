@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://ci8svkysbdenf"]
+
+[ext_resource type="Texture2D" uid="uid://bt80c6mhd022i" path="res://rehab/SadCat/sc1.png" id="1_k5ls2"]
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_plwec"]
+
+[resource]
+script = ExtResource("1_plwec")
+name = Array[String](["Wiki", "Ferdinand", "Quincy ", "Cornelius "])
+story = Array[String](["Stock in catnip futures took an unexpected plunge.", "Crying over spilt milk.", "In the dumps after his opera audition was cut short by an unexpected nerve damage."])
+sadcat = ExtResource("1_k5ls2")

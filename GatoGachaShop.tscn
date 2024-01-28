@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0vg7f1a21m7w"]
+
+[ext_resource type="Texture2D" uid="uid://l61n5vphj876" path="res://button/gaca.png" id="1_viupr"]
+[ext_resource type="Texture2D" uid="uid://kxbkjk2wpjs6" path="res://button/gaca_on.png" id="2_o52kf"]
+[ext_resource type="Script" path="res://GatoGachaShop.gd" id="2_wh6f7"]
+[ext_resource type="FontFile" uid="uid://bx22ahrce87rx" path="res://assets/CreatiCredad.ttf" id="4_67g8s"]
+
+[node name="GatoGachaShop" type="TextureButton" node_paths=PackedStringArray("priceLabel", "countLabel")]
+offset_left = -100.0
+offset_top = -32.0
+offset_right = 100.0
+offset_bottom = 33.0
+texture_normal = ExtResource("1_viupr")
+texture_pressed = ExtResource("2_o52kf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_wh6f7")
+priceLabel = NodePath("price")
+countLabel = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -29.0
+offset_right = 204.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_67g8s")
+theme_override_font_sizes/font_size = 25
+text = "GatoGacha"
+horizontal_alignment = 1
+
+[node name="price" type="Label" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 71.0
+offset_right = 157.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_67g8s")
+theme_override_font_sizes/font_size = 25
+text = "100
+"
+horizontal_alignment = 1
+
+[node name="Common" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Rare" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ssr" type="AudioStreamPlayer2D" parent="."]

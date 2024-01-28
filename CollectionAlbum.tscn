@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca81bmyfrub55"]
+
+[ext_resource type="Texture2D" uid="uid://crs3yyoeu5be" path="res://button/Untitled-1.png" id="1_bwdlv"]
+[ext_resource type="Script" path="res://CollectionAlbum.gd" id="2_trq4d"]
+[ext_resource type="FontFile" uid="uid://bx22ahrce87rx" path="res://assets/CreatiCredad.ttf" id="3_78dyn"]
+[ext_resource type="Texture2D" uid="uid://do0ua5dutrslm" path="res://button/next.png" id="4_t8p8r"]
+
+[node name="Collection" type="TextureButton" node_paths=PackedStringArray("catShow", "title")]
+offset_left = -11.0
+offset_right = 189.0
+offset_bottom = 200.0
+texture_normal = ExtResource("1_bwdlv")
+stretch_mode = 0
+script = ExtResource("2_trq4d")
+catShow = NodePath("CatShowArea")
+title = NodePath("Label")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -16.0
+offset_right = 580.0
+offset_bottom = 381.0
+color = Color(0.454902, 0.447059, 0.392157, 1)
+
+[node name="CatShowArea" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 60.0
+offset_right = 444.0
+offset_bottom = 360.0
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 8.0
+offset_right = 337.0
+offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("3_78dyn")
+theme_override_font_sizes/font_size = 33
+text = "Common Cat 16/16"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 8.0
+offset_right = 459.0
+offset_bottom = 48.0
+texture_normal = ExtResource("4_t8p8r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]

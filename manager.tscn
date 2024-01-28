@@ -1,0 +1,172 @@
+[gd_scene load_steps=17 format=3 uid="uid://dcpj66sufq5bb"]
+
+[ext_resource type="Script" path="res://manager.gd" id="1_eysee"]
+[ext_resource type="Texture2D" uid="uid://deh8dwv5lpndv" path="res://fishback.png" id="2_fot58"]
+[ext_resource type="Texture2D" uid="uid://cnyk5ul7r0gkj" path="res://button_off.png" id="2_td5pu"]
+[ext_resource type="Texture2D" uid="uid://busmuduhdk8oh" path="res://button_on.png" id="3_tv0sw"]
+[ext_resource type="Script" path="res://RollingBackground.gd" id="3_xi06m"]
+[ext_resource type="FontFile" uid="uid://bx22ahrce87rx" path="res://assets/CreatiCredad.ttf" id="4_4j8iv"]
+[ext_resource type="Texture2D" uid="uid://b50786373wdi0" path="res://fishbackFrenzy.png" id="5_cc1md"]
+[ext_resource type="PackedScene" uid="uid://dn2xj8a2l3jhn" path="res://buy_auto_silly.tscn" id="5_qrovm"]
+[ext_resource type="PackedScene" uid="uid://cbqn2ibksqj4n" path="res://sillyClickCountShop.tscn" id="6_mjdql"]
+[ext_resource type="PackedScene" uid="uid://c0vg7f1a21m7w" path="res://GatoGachaShop.tscn" id="7_7g3c8"]
+[ext_resource type="Texture2D" uid="uid://cq4vcq0u5pfrb" path="res://button/Illustration.png" id="7_exx15"]
+[ext_resource type="PackedScene" uid="uid://cn7fqmcqx3iql" path="res://CatRehabUpgrade.tscn" id="10_d2ry4"]
+[ext_resource type="AudioStream" uid="uid://demjkxu7xlloe" path="res://assets/sabilulungan.mp3" id="11_xmu4b"]
+[ext_resource type="AudioStream" uid="uid://dnh5auyrbafhs" path="res://assets/boom.wav" id="12_t4sof"]
+[ext_resource type="PackedScene" uid="uid://ca81bmyfrub55" path="res://CollectionAlbum.tscn" id="13_hwd30"]
+[ext_resource type="AudioStream" uid="uid://bodtpfi26y8c1" path="res://assets/Microsoft Windows XP Startup Sound.mp3" id="16_tfwjc"]
+
+[node name="Manager" type="Control" node_paths=PackedStringArray("counterLabel", "autosilly", "sillyup", "gachaShop", "catRehab", "sillyCatButton", "catArea", "soundEffect", "album", "background")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eysee")
+counterLabel = NodePath("Counter")
+autosilly = NodePath("BuyAutoSilly")
+sillyup = NodePath("SillyClickCountShop")
+gachaShop = NodePath("GatoGachaShop")
+catRehab = NodePath("CatRehabUpgrade")
+sillyCatButton = NodePath("MainButton")
+silly = ExtResource("3_tv0sw")
+notSilly = ExtResource("2_td5pu")
+catArea = NodePath("CatField")
+soundEffect = NodePath("Sound")
+album = NodePath("Collection")
+normalBG = ExtResource("2_fot58")
+frenzyBG = ExtResource("5_cc1md")
+background = NodePath("RollingBackground")
+
+[node name="RollingBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3000.0
+offset_bottom = 697.0
+texture = ExtResource("2_fot58")
+stretch_mode = 1
+script = ExtResource("3_xi06m")
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 39.0
+offset_right = 871.0
+offset_bottom = 339.0
+texture = ExtResource("7_exx15")
+
+[node name="MainButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 410.0
+offset_right = 239.0
+offset_bottom = 610.0
+texture_normal = ExtResource("2_td5pu")
+texture_pressed = ExtResource("3_tv0sw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 293.0
+offset_right = 233.0
+offset_bottom = 334.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_4j8iv")
+theme_override_font_sizes/font_size = 35
+text = "Silly coin: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Counter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 351.0
+offset_right = 227.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_4j8iv")
+theme_override_font_sizes/font_size = 35
+text = "0"
+horizontal_alignment = 1
+
+[node name="BuyAutoSilly" parent="." node_paths=PackedStringArray("catArea") instance=ExtResource("5_qrovm")]
+offset_left = 141.0
+offset_top = 75.0
+offset_right = 181.0
+offset_bottom = 115.0
+catArea = NodePath("../CatField")
+
+[node name="SillyClickCountShop" parent="." instance=ExtResource("6_mjdql")]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 168.0
+offset_right = 241.0
+offset_bottom = 233.0
+
+[node name="GatoGachaShop" parent="." node_paths=PackedStringArray("catArea") instance=ExtResource("7_7g3c8")]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 44.0
+offset_right = 1106.0
+offset_bottom = 109.0
+catArea = NodePath("../CatField")
+
+[node name="CatRehabUpgrade" parent="." instance=ExtResource("10_d2ry4")]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 168.0
+offset_right = 1106.0
+offset_bottom = 233.0
+
+[node name="CatField" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 275.0
+offset_top = 10.0
+offset_right = 875.0
+offset_bottom = 360.0
+color = Color(0.454902, 0.447059, 0.392157, 0)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_xmu4b")
+autoplay = true
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_t4sof")
+volume_db = -13.358
+
+[node name="FrenzyTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="FrenzyTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 94.0
+offset_right = 781.0
+offset_bottom = 277.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j8iv")
+theme_override_font_sizes/font_size = 89
+text = "SILLY 
+   OVERLOAD"
+
+[node name="Collection" parent="." instance=ExtResource("13_hwd30")]
+layout_mode = 0
+offset_left = 1082.0
+offset_top = 17.0
+offset_right = 1282.0
+offset_bottom = 217.0
+
+[node name="windows" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_tfwjc")
+
+[connection signal="button_down" from="MainButton" to="." method="_on_texture_button_button_down"]
+[connection signal="buy_silly" from="BuyAutoSilly" to="." method="_on_buy_auto_silly_buy_silly"]
+[connection signal="button_down" from="SillyClickCountShop" to="." method="_on_silly_click_count_shop_button_down"]
+[connection signal="button_down" from="GatoGachaShop" to="." method="_on_gato_gacha_shop_button_down"]
+[connection signal="button_down" from="CatRehabUpgrade" to="." method="_on_cat_rehab_upgrade_button_down"]
+[connection signal="timeout" from="FrenzyTimer" to="." method="_on_frenzy_timer_timeout"]

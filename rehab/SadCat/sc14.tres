@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://qdwmt5v3gkim"]
+
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_84jad"]
+[ext_resource type="Texture2D" uid="uid://cn7m1g5ofsg1f" path="res://rehab/SadCat/sc14.png" id="1_v8ar0"]
+
+[resource]
+script = ExtResource("1_84jad")
+name = Array[String](["Gosha", "Bogos", "Gregori"])
+story = Array[String](["Become immortal only to realize all the people he care are now gone and will gone some day.", "Experiences the incomprehensible vastness of human's greed.", "The wind close the door too hard on mom's room."])
+sadcat = ExtResource("1_v8ar0")

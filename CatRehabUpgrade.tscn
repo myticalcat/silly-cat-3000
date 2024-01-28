@@ -1,0 +1,102 @@
+[gd_scene load_steps=33 format=3 uid="uid://cn7fqmcqx3iql"]
+
+[ext_resource type="Texture2D" uid="uid://vtj6g45t8mhw" path="res://button/rehab.png" id="1_8elsf"]
+[ext_resource type="Texture2D" uid="uid://dtc7mny1dmfpi" path="res://button/rehab_on.png" id="2_ecaws"]
+[ext_resource type="Script" path="res://CatRehabUpgrade.gd" id="3_abmew"]
+[ext_resource type="Texture2D" uid="uid://8mikdpln5nry" path="res://rehab/building/lvl1.png" id="4_7cksv"]
+[ext_resource type="FontFile" uid="uid://bx22ahrce87rx" path="res://assets/CreatiCredad.ttf" id="4_v2v16"]
+[ext_resource type="Texture2D" uid="uid://bmkvlqe15fsnm" path="res://rehab/building/lvl2.png" id="5_lxeb4"]
+[ext_resource type="Texture2D" uid="uid://cq7xgu6qyhakp" path="res://icon.svg" id="5_pptmh"]
+[ext_resource type="Texture2D" uid="uid://kcyq4ejt14wp" path="res://rehab/building/lvl3.png" id="6_4wc5n"]
+[ext_resource type="Script" path="res://RehabArea.gd" id="6_a7jvc"]
+[ext_resource type="Texture2D" uid="uid://71s3koie36po" path="res://rehab/building/lvl4.png" id="7_8tcx0"]
+[ext_resource type="Texture2D" uid="uid://c1te55kn7pb7w" path="res://rehab/building/lvl5.png" id="8_dfyta"]
+[ext_resource type="Texture2D" uid="uid://ddfn205aw6sl8" path="res://rehab/building/lvl6.png" id="9_w8ag7"]
+[ext_resource type="Texture2D" uid="uid://chvua4sxi8cu2" path="res://rehab/building/lvl7.png" id="10_yaagy"]
+[ext_resource type="Texture2D" uid="uid://d0owa6x8a73pv" path="res://rehab/building/lvl8.png" id="11_o1117"]
+[ext_resource type="Texture2D" uid="uid://h7kuk3abm56q" path="res://rehab/building/lvl9.png" id="12_4dhl8"]
+[ext_resource type="Texture2D" uid="uid://b8tgrjpahso0v" path="res://rehab/building/lvl10.png" id="13_j5qkh"]
+[ext_resource type="PackedScene" uid="uid://c4lob0pu3s8s2" path="res://rehab/SadCat.tscn" id="17_0nrmm"]
+[ext_resource type="Resource" uid="uid://ci8svkysbdenf" path="res://rehab/SadCat/sc1.tres" id="17_3lqol"]
+[ext_resource type="Resource" uid="uid://dy0ppdoxa384y" path="res://rehab/SadCat/sc2.tres" id="18_tjrok"]
+[ext_resource type="Resource" uid="uid://31iuccfgjsko" path="res://rehab/SadCat/sc3.tres" id="19_ncxpm"]
+[ext_resource type="Resource" uid="uid://dpm8hc0aiw0nu" path="res://rehab/SadCat/sc4.tres" id="20_iqvsr"]
+[ext_resource type="Resource" uid="uid://d3d6vbehe43o8" path="res://rehab/SadCat/sc5.tres" id="21_m0v27"]
+[ext_resource type="Resource" uid="uid://dhq40gwidqls" path="res://rehab/SadCat/sc6.tres" id="22_5smtn"]
+[ext_resource type="Resource" uid="uid://blmdwl3v4iha7" path="res://rehab/SadCat/sc7.tres" id="23_u3tgh"]
+[ext_resource type="Resource" uid="uid://crene8od5hi83" path="res://rehab/SadCat/sc8.tres" id="24_wlclp"]
+[ext_resource type="Resource" uid="uid://bx8gvct6ulp3o" path="res://rehab/SadCat/sc9.tres" id="25_cd1i7"]
+[ext_resource type="Resource" uid="uid://hcwqeoj5ebto" path="res://rehab/SadCat/sc10.tres" id="26_ycvas"]
+[ext_resource type="Resource" uid="uid://bscdant6mng8a" path="res://rehab/SadCat/sc11.tres" id="27_wpy5r"]
+[ext_resource type="Resource" uid="uid://c2ulfjpmumf0t" path="res://rehab/SadCat/sc12.tres" id="28_2ri2a"]
+[ext_resource type="Resource" uid="uid://c4psdnarrtbmn" path="res://rehab/SadCat/sc13.tres" id="29_y3c6y"]
+[ext_resource type="Resource" uid="uid://qdwmt5v3gkim" path="res://rehab/SadCat/sc14.tres" id="30_jyjrw"]
+[ext_resource type="AudioStream" uid="uid://bg11ytkq70ryx" path="res://assets/You Got Mail.mp3" id="30_lng38"]
+
+[node name="CatRehabUpgrade" type="TextureButton" node_paths=PackedStringArray("priceLabel", "countLabel", "catArea")]
+offset_left = -100.0
+offset_top = -32.0
+offset_right = 100.0
+offset_bottom = 33.0
+texture_normal = ExtResource("1_8elsf")
+texture_pressed = ExtResource("2_ecaws")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_abmew")
+priceLabel = NodePath("price")
+countLabel = NodePath("Label")
+catArea = NodePath("RehabArea")
+catAreaTextures = Array[Texture2D]([ExtResource("4_7cksv"), ExtResource("5_lxeb4"), ExtResource("6_4wc5n"), ExtResource("7_8tcx0"), ExtResource("8_dfyta"), ExtResource("9_w8ag7"), ExtResource("10_yaagy"), ExtResource("11_o1117"), ExtResource("12_4dhl8"), ExtResource("13_j5qkh")])
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -29.0
+offset_right = 204.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_v2v16")
+theme_override_font_sizes/font_size = 25
+text = "Open Cat Rehab"
+horizontal_alignment = 1
+
+[node name="price" type="Label" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 71.0
+offset_right = 157.0
+offset_bottom = 97.0
+theme_override_colors/font_color = Color(0.454902, 0.447059, 0.392157, 1)
+theme_override_fonts/font = ExtResource("4_v2v16")
+theme_override_font_sizes/font_size = 25
+text = "100
+"
+horizontal_alignment = 1
+
+[node name="RehabArea" type="TextureRect" parent="." node_paths=PackedStringArray("sadcat", "notif")]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 200.0
+offset_bottom = 448.0
+texture = ExtResource("5_pptmh")
+script = ExtResource("6_a7jvc")
+sadcat = NodePath("../SadCat")
+sadCatProfile = Array[Resource("res://rehab/SadCatResource.gd")]([ExtResource("17_3lqol"), ExtResource("18_tjrok"), ExtResource("19_ncxpm"), ExtResource("20_iqvsr"), ExtResource("21_m0v27"), ExtResource("22_5smtn"), ExtResource("23_u3tgh"), ExtResource("24_wlclp"), ExtResource("25_cd1i7"), ExtResource("26_ycvas"), ExtResource("27_wpy5r"), ExtResource("28_2ri2a"), ExtResource("29_y3c6y"), ExtResource("30_jyjrw")])
+notif = NodePath("../Mail")
+
+[node name="SadCat" parent="." instance=ExtResource("17_0nrmm")]
+layout_mode = 0
+offset_left = -618.0
+offset_top = 245.0
+offset_right = -418.0
+offset_bottom = 445.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="Mail" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_lng38")
+
+[connection signal="openRehab" from="." to="RehabArea" method="_on_cat_rehab_upgrade_open_rehab"]
+[connection signal="timeout" from="Timer" to="RehabArea" method="_on_timer_timeout"]

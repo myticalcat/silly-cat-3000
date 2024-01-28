@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://31iuccfgjsko"]
+
+[ext_resource type="Texture2D" uid="uid://b5f3vu041gpxm" path="res://rehab/SadCat/sc3.png" id="1_1ehvf"]
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_nult0"]
+
+[resource]
+script = ExtResource("1_nult0")
+name = Array[String](["Rene ", "Bayes", "Tayler", "Ujang"])
+story = Array[String](["Buys an invisibility hat and ends up at his birthday party where no one notices him.", "Learns to time travel, but can only go back to those moments when he hasn't realised happiness.", "He discovers the immortality pill on his search for immortality, but it expires because it's expired."])
+sadcat = ExtResource("1_1ehvf")

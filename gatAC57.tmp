@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceuyvajq3fj30"]
+
+[ext_resource type="Script" path="res://gatoGacha.gd" id="1_rm41g"]
+[ext_resource type="Resource" uid="uid://c8p6esodaksel" path="res://gatoGacha/common1.tres" id="2_jscpu"]
+[ext_resource type="Resource" uid="uid://cpltgl1bphlg4" path="res://gatoGacha/common2.tres" id="3_fahll"]
+[ext_resource type="Resource" uid="uid://bihw05t3mk8sv" path="res://gatoGacha/rare1.tres" id="4_h1uk7"]
+[ext_resource type="Resource" uid="uid://bqv7jvvgq5sjg" path="res://gatoGacha/rare2.tres" id="5_m28wk"]
+[ext_resource type="Resource" uid="uid://bjvkai6rirwyc" path="res://gatoGacha/ssr1.tres" id="6_u5hhi"]
+
+[node name="GatoGacha" type="Sprite2D" node_paths=PackedStringArray("timer")]
+script = ExtResource("1_rm41g")
+timer = NodePath("Timer")
+commonSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("2_jscpu"), ExtResource("3_fahll")])
+rareSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("4_h1uk7"), ExtResource("5_m28wk")])
+superSilly = Array[Resource("res://GatoResource.gd")]([ExtResource("6_u5hhi")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

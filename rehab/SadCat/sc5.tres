@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://d3d6vbehe43o8"]
+
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_3a7nt"]
+[ext_resource type="Texture2D" uid="uid://ybgpj8rpm8w0" path="res://rehab/SadCat/sc5.png" id="1_sofkr"]
+
+[resource]
+script = ExtResource("1_3a7nt")
+name = Array[String](["Thorfinn", "Bari", "Mansur"])
+story = Array[String](["She collected every book on happiness, only to realize that reading about it wasn't the same as feeling it.", "In his quest to photograph the rarest bird, he realized he'd become rarer than the birds, seldom seen by his loved ones.", "Mastered the art of conversation with every living creature, only to find silence in his own company.", "In his garden of rare plants, he found that the rarest thing was a companion to share its beauty with."])
+sadcat = ExtResource("1_sofkr")

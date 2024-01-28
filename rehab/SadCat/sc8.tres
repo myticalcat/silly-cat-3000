@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://crene8od5hi83"]
+
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_0j5ht"]
+[ext_resource type="Texture2D" uid="uid://dnx3j2cbc0x4r" path="res://rehab/SadCat/sc8.png" id="1_sxgx8"]
+
+[resource]
+script = ExtResource("1_0j5ht")
+name = Array[String](["Wain", "Sanusi", "Agil"])
+story = Array[String](["His cactus ran away.", "He passes all the survival skill tests, but in real life, the only thing he can't survive is the thought of losing you.", "Forget to take a poop this morning."])
+sadcat = ExtResource("1_sxgx8")

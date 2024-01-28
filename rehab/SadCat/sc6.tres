@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SadCatResouce" load_steps=3 format=3 uid="uid://dhq40gwidqls"]
+
+[ext_resource type="Script" path="res://rehab/SadCatResource.gd" id="1_bgv6r"]
+[ext_resource type="Texture2D" uid="uid://37437dpauhmu" path="res://rehab/SadCat/sc6.png" id="1_ot6td"]
+
+[resource]
+script = ExtResource("1_bgv6r")
+name = Array[String](["Puput", "Syifa", "Nirmana"])
+story = Array[String](["She wrote the world's greatest novel, but in a language she invented, and nobody could understand.", "She painted her masterpiece in colors so unique that no one else could see them.", "She built a machine to hear the stars, but all she heard was the loneliness of the universe."])
+sadcat = ExtResource("1_ot6td")
